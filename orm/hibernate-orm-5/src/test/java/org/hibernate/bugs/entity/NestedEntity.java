@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Version;
 
 @Entity
-public class SecondEntity {
+public class NestedEntity {
 
     @Id
     @GeneratedValue
@@ -17,8 +17,20 @@ public class SecondEntity {
 
     public String name;
 
+    public Long getId() {
+        return id;
+    }
+
+    public Long getVersion() {
+        return version;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
-        return "Second{" + "id=" + id + ", version=" + version + ", name='" + name + '\'' + '}';
+        return "NestedEntity{" + "id=" + id + ", version=" + version + ", name='" + name + '\'' + '}';
     }
 }
